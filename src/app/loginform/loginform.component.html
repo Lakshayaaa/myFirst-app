@@ -1,0 +1,28 @@
+<form [formGroup]="loginform">
+    <div class="center">
+        <link rel="stylesheet" href="loginform.component.css">
+        <h1> Login Form </h1>
+            <label for="Username">Username : </label><br>
+            <input type="text" id="Username" formControlName="Username" placeholder="Enter Your Name"
+                    required><br><br>
+            
+            <label for="password">password : </label><br>
+            <input type="password" id="password" formControlName="password" placeholder="Enter your password"
+                    required><br><br>
+
+            <input type="checkbox" checked="checked" name="remember"> Remember password <br><br>
+
+        
+                <button type="Submit">Login</button><br>
+    
+                <div class="Signup_link">
+                    Not having an account? <a href="#">SignUp</a><br>
+
+                    Or Login via Social Links <br>
+                        
+                    <a href="#" class="fa fa-google">google</a> <br>
+
+                    <a href="#" class="fa fa-facebook">facebook</a>
+                </div>
+    </div>
+</form>

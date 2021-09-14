@@ -1,0 +1,67 @@
+<h1>
+    {{title}}
+</h1>
+<form [formGroup]="regform" (ngSubmit)="regform.valid && onSubmit() && getuserformdata(regform.value)">
+    <div>
+        <link rel="stylesheet" href="reactive.component.css">
+        <h1>Registartion Form</h1>
+
+        <label for="Username">Username</label>
+        <input type="text" id="Username"  formControlName="Username" placeholder="Enter your Username"><br><br>
+        <!-- <ng-template [ngIf]="regform.get('Username').invalid && (regform.get('Username').dirty || regform.get('Username').touched")>
+        <div>Kindly Provide the Correct Name </div></ng-template> -->
+
+        <label for="email">email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email Id"><br><br>
+        <!-- <ng-template
+            [ngIf]="regform.get('email').invalid && (regform.get('email').dirty || regform.get('email').touched)">
+            <div> Kindly Provide the Correct email address</div>
+            <ng-template> -->
+
+        <label for="password">password</label>
+        <input type="password" id="password" formControlName="password" placeholder="Enter your password"><br><br>
+        <!-- <div *ngIf="regform.get('password').invalid && (regform.get('password').dirty || regform.get('password').touched)">
+        Your password must be 8 characters to 15 characters</div> -->
+
+        <label for="DateofBirth">Date Of Birth</label>
+        <input type="date" id="DateofBirth" formControlName="DateofBirth"><br><br>
+        <!-- <div *ngIf="regform.get('DateofBirth').invalid && (regform.get('DateofBirth').dirty || regform.get('DateofBirth').touched )">
+        Kindly Provide the Correct DateofBirth</div> -->
+
+        <label for="PhoneNumber">PhoneNumber</label>
+        <input type="number" id="PhoneNumber" formControlName="PhoneNumber"><br><br>
+        <!-- <div *ngIf="regform.get('PhoneNumber').invalid && (regform.get('PhoneNumber').dirty || regform.get('PhoneNumber').touched)">
+        Kindly Provide the Correct PhoneNumber </div> -->
+
+        <!-- <label for="Gender"> Gender</label>
+        <input type="radio" ngValue="male" formControlName="Gender"> Male
+        <input type="radio" ngValue="female" formControlName="Gender"> Female <br> -->
+        <button>Submit</button>
+        <button>Add New User</button>
+
+    </div>
+</form>
+<h2>
+    {{regform.value.Username}}<br>
+    {{regform.value.email}}<br>
+    {{regform.value.password}}<br>
+    {{regform.value.DateofBirth}}<br>
+    {{regform.value.PhoneNumber}}<br>
+</h2>
+
+<!-- <h3>Get Request (https://jsonplaceholder.typicode.com/posts/1/comments)</h3>
+<table>
+    <tr>
+        <th>postid</th>
+        <th>Id</th>
+        <th>name</th>
+        <th>email</th>
+    </tr>
+
+    <tr *ngfor="let com for comments">
+        <td>{{com.postid}}</td>
+        <td>{{com.Id}}</td>
+        <td>{{com.name}}</td>
+        <td>{{com.email}}</td>
+    </tr>
+</table> -->
