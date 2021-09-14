@@ -2,7 +2,7 @@
 <form [formGroup]="regform" (ngSubmit)="regform.valid && onSubmit() && getuserformdata(regform.value)">
     <div>
         <link rel="stylesheet" href="reactive.component.css">
-        
+        <h1>RegistrationForm</h1>
         <label for="Username">Username</label>
         <input type="text" id="Username"  formControlName="Username" placeholder="Enter your Username"><br><br>
         <!-- <ng-template [ngIf]="regform.get('Username').invalid && (regform.get('Username').dirty || regform.get('Username').touched")>
